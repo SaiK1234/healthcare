@@ -56,7 +56,7 @@ const NavItem = ({ title, icon, isActive }) => {
   `;
 
   return (
-    <a href="#" className={classes}>
+    <a href="/dashboard" className={classes}>
       {getIcon(icon)}
       <span className={isActive ? 'font-medium' : ''}>{title}</span>
     </a>
