@@ -3,8 +3,9 @@ import { Search, Bell, Plus, Menu } from 'lucide-react';
 import Sidebar from './Sidebar/Sidebar';
 import BodyChart from './Charts/BodyChart';
 import ActivityChart from './Charts/ActivityChart';
-
-
+import Calendar from './Calendar/Calendar';
+import AppointmentsList from './Appointments/AppointmentsList';
+import UpcomingSchedule from './Schedule/UpcomingSchedule';
 
 const Dashboard = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -97,6 +98,22 @@ const Dashboard = () => {
             </div>
           </div>
 
+          {/* Calendar */}
+          <div className="px-4 lg:px-6">
+            <div className="bg-white rounded-xl shadow-sm p-4 mb-6">
+              <Calendar />
+            </div>
+
+            {/* Appointments */}
+            <div className="space-y-4 mb-6">
+              <AppointmentsList />
+            </div>
+
+            {/* Upcoming Schedule */}
+            <div className="bg-white rounded-xl shadow-sm p-4 mb-6 lg:mb-0">
+              <UpcomingSchedule />
+            </div>
+          </div>
         </div>
 
         {/* Mobile Menu Overlay */}
